@@ -1,6 +1,6 @@
 # 📨 Smuggled in the Mail: The Flood of Synthetic Cannabis in German Prisons 
 
-The website for the research is [here/PLATZHALTER](https://github.com/the-markup/investigation-amazon-brands). 
+The website for the research is [here](https://github.com/ciaract/drug-smuggling-in-german-prisons/). 
 
 ## 🚩 Goal
 I developed this investigation as part of the __Lede Program at Columbia University in New York__. The project is primarily intended as an opportunity to apply the methods and tools taught during the program in a practical setting. However, I quickly became a little overambitious and decided not only to put my newly acquired skills into practice, but also to combine them with an investigative project that I can continue working on after the program as part of my professional work as a journalist.
