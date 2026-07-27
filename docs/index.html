@@ -1,0 +1,626 @@
+<!-- Code nach Copy-Paste neu formatieren: Shift + Option + F -->
+<!DOCTYPE html> <!-- Sagt dem Browser: "Benutze HTML5, nicht alte Regeln" -->
+<html lang="en"> <!-- Sagt dem Browser: Der Text auf dieser Seite ist ENGLISCH -->
+
+
+<head>
+    <!-- Öffnet den Head-Bereich: Hier kommen Metadaten, Links, Titel hin (alles, was NICHT auf der Seite sichtbar ist) -->
+    <meta charset="utf-8"> <!-- Sagt dem Browser: Der Text ist in UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Sagt dem Browser: Die Seite ist mobil-responsive -->
+    <title>Delivered by Post: The Synthetic Cannabis Flood in German Prisons</title> <!-- CHANGE: Define title text -->
+
+    <!-- Google fonts -->
+    <!-- Sag dem Browser: Verbindung zu diesen Servern schon vorbereiten,damit die Schriften schneller laden. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CHANGE: Hier kommen die Font-Dateien von. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- CHANGE: Hier kommt die CSS-Definition von. -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Poppins:wght@700;800;900&family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CHANGE: Hier lädst du Schriftfamilien von Google Fonts, display=swap: Text sofort zeigen, Schrift wechseln wenn geladen. -->
+
+    <style>
+        /* CHANGE Style-Block: ALLE CSS-Regeln für die ganze Seite, gesammelt an einem Ort (Einzelne HTML-Elemente können zusätzlich noch Inline-Styles haben) */
+        :root {
+            --paper: #FFFFFF;
+            --ink: #3E241A;
+            --ink-soft: #6E5648;
+            --mint-dark: #3E241A;
+            --line-strong: rgba(33, 28, 21, 0.32);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(165deg, #D6D6D2 0%, #CCCCC8 50%, #C2C2BE 100%);
+            color: var(--ink);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 19px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .content {
+            max-width: 860px;
+            margin: auto;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+
+        a {
+            color: var(--mint-dark);
+        }
+
+        /* ---------- Hero (Hauptüberschrift) ---------- */
+        .hero {
+            position: relative;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            padding: 4.5em 1.5em 4em;
+            text-align: center;
+            background: linear-gradient(165deg, #D6D6D2 0%, #CCCCC8 50%, #C2C2BE 100%);
+        }
+
+        .hero-sticker {
+            position: relative;
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            background: #EDE4DC;
+            border: 2.5px solid #3E241A;
+            border-radius: 22px;
+            padding: 6px 18px;
+            color: #3E241A;
+            box-shadow: 3px 3px 0 #3E241A;
+            margin-bottom: 18px;
+            transform: rotate(-2.5deg);
+        }
+
+        .hero-sticker-icon {
+            position: absolute;
+            right: -30px;
+            top: -26px;
+            transform: rotate(12deg);
+        }
+
+        .hero-kicker {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #3E241A;
+            margin: 0;
+        }
+
+        .hero-headline {
+            font-family: 'Baloo 2', sans-serif;
+            font-weight: 800;
+            font-size: 104px;
+            line-height: 0.86;
+            color: #A85A32;
+            text-shadow: 0 1px 0 #874827, 0 2px 0 #66371D, 0 3px 5px rgba(25, 10, 5, 0.4);
+            filter: none;
+            margin: 16px 0;
+        }
+
+        /* ---------- Header (Untertitel + Byline unter der Hero-Section) ---------- */
+        .header {
+            padding: 3.6em 0 2em;
+        }
+
+        .subhead {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1.25em;
+            line-height: 1.4;
+            color: var(--ink);
+            margin: 0;
+        }
+
+        .byline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1em;
+            color: var(--ink);
+            margin-top: 1.6em;
+        }
+
+        .byline strong {
+            color: inherit;
+            font-weight: normal;
+        }
+
+        /* ---------- Body copy ---------- */
+        p {
+            line-height: 1.68;
+            margin: 0;
+            padding-bottom: 1.3em;
+            text-align: justify;
+        }
+
+        h2 {
+            display: inline-block;
+            background: #C48A5C;
+            border: 2.5px solid var(--ink);
+            border-radius: 16px;
+            padding: 10px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 1;
+            color: var(--ink);
+            margin: 0.3em 0 0.6em;
+        }
+
+        /* ---------- Exhibit (chart) figures ---------- */
+        .exhibit {
+            position: relative;
+            margin: 3em 0 2.4em;
+            background: #FBFAF8;
+            border: 2px solid var(--ink);
+            border-radius: 16px;
+            padding: 24px 20px 16px;
+            box-shadow: 0 0 0 6px rgba(168, 90, 50, 0.10), 0 8px 24px rgba(62, 36, 26, 0.18);
+        }
+
+        .exhibit-tag {
+            position: absolute;
+            top: -24px;
+            right: 24px;
+            background: rgba(168, 90, 50, 0.94);
+
+            border: 2.5px solid var(--ink);
+            border-radius: 999px;
+            padding: 10px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1;
+            color: #EDE4DC;
+            z-index: 2;
+        }
+
+        .exhibit-body {
+            text-align: center;
+        }
+
+        .exhibit-row-outer {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            display: flex;
+            justify-content: center;
+            padding: 0 1.5em;
+            box-sizing: border-box;
+            margin-top: 3em;
+            margin-bottom: 2.4em;
+        }
+
+        .exhibit-row {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .exhibit-row .exhibit {
+            flex: 1 1 300px;
+            margin: 0;
+        }
+
+        .exhibit-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .exhibit-compact {
+            width: fit-content;
+            margin: 1em auto 1.3em;
+        }
+
+        figcaption {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
+            color: var(--ink-soft);
+            padding-top: 0.8em;
+        }
+
+        .exhibit-compact figcaption {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* ---------- Infobox ---------- */
+        .infobox {
+            position: relative;
+            background: #EDE4DC;
+            border: 2px solid var(--ink);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 0 0 1.3em;
+            box-shadow: 0 0 0 6px rgba(168, 90, 50, 0.10), 0 8px 24px rgba(62, 36, 26, 0.18);
+        }
+
+        .infobox-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 1.68;
+            color: var(--ink);
+        }
+
+        .infobox-heading {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--ink);
+            margin: 0 0 0.6em;
+        }
+
+        .infobox-subheading {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            margin: 1.4em 0 0.4em;
+            border-top: 1px solid var(--line-strong);
+            padding-top: 1.2em;
+        }
+
+        .infobox-list {
+            margin: 0 0 1.3em;
+            padding-left: 1.5em;
+        }
+
+        .infobox-list li {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 19px;
+            line-height: 1.68;
+            color: var(--ink);
+            padding-bottom: 0.7em;
+        }
+
+        .methodology .infobox-text,
+        .methodology .infobox-list li {
+            font-size: 16px;
+        }
+
+        .methodology .infobox-subheading {
+            font-size: 17px;
+        }
+
+        .infobox-attribution {
+            margin-top: 16px;
+            text-align: right;
+        }
+
+        .infobox-attribution .name,
+        .infobox-attribution .title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .infobox-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 1.68;
+            color: var(--ink);
+            text-align: left;
+        }
+
+        .infobox-attribution {
+            margin-top: 16px;
+            text-align: right;
+        }
+
+        .infobox-attribution .name,
+        .infobox-attribution .title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            .hero-headline {
+                font-size: 52px;
+            }
+
+            .content {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            h1 {
+                font-size: 2.1em;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body> <!-- Öffnet Body-Bereich: Hier kommt alles, was man wirklich auf der Seite sieht: Überschriften, Text, Bilder.-->
+    <div class="content">
+        <div class="hero">
+            <div class="hero-sticker">
+                Smuggled in the Mail
+                <svg class="hero-sticker-icon" width="50" height="40" viewBox="0 0 50 40">
+                    <polygon points="2,4 48,4 48,36 2,36" fill="#C48A5C" stroke="#3E241A" stroke-width="2.5" />
+                    <path d="M25 2L48 4L25 22L2 4Z" fill="#F0E2D2" stroke="#3E241A" stroke-width="2.5"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="hero-kicker">The Flood of</div>
+            <h1 class="hero-headline">Synthetic <br>Cannabis</h1>
+            <div class="hero-kicker">in German Prisons</div>
+        </div>
+
+        <div class="header">
+            <p class="subhead">Drug smuggling in the German prison system has changed radically: In the past, packages
+                of drugs were thrown over prison walls or handed over during visits. Today, inconspicuous
+                letters soaked in new psychoactive substances are all it takes.</p>
+            <div class="byline">By: <strong>Ciara Cesaro-Tadic</strong> · Date: July 2026</div>
+        </div>
+
+        <p class="lede">A white envelope. An address on it. Inside, a sheet of paper with a seemingly harmless message:
+            “Happy Birthday.” To the mailroom at a prison, this letter looks like thousands of others. But some of these
+            letters carry more than just words. They contain drugs.</p>
+
+        <h2>The Rise of New Psychoactive Substances</h2>
+
+        <p>The reason for this is a group of substances known as new psychoactive substances (NPSs). These are mostly
+            synthetic compounds developed to mimic the effects of already known illegal drugs or prescription
+            medications. They are often marketed as supposedly legal alternatives to substances such as cannabis, MDMA,
+            or LSD. Synthetic opioids are also part of the NPS
+            category. </p>
+
+        <p>These substances are particularly dangerous because they are effective even at very low doses. For
+            THC, the primary psychoactive compound in cannabis, the typical effective dose is around 15 mg, whereas
+            common synthetic cannabinoids can produce effects at just 0.4–1 mg. As a result, even a single gram—costing
+            around €20 can yield hundreds to thousands of individual doses, making these substances highly attractive
+            for trafficking and smuggling.</p>
+
+        <figure class="exhibit exhibit-compact">
+            <div class="exhibit-body">
+                <img src="jwh-018.jpg"
+                    alt="A sealed bag labeled 1-Pentyl-3-(1-naphthoyl)indole (JWH-018), 500mg, marked 'Not for Human Consumption'"
+                    style="width: 100%; max-width: 580px;">
+            </div>
+            <figcaption>1-Pentyl-3-(1-naphthoyl)indole, one of the best-known<br>
+                and historically first synthetic cannabinoids,<br>
+                shown in powder form. (Source: Wikimedia Commons / CC0 1.0)</figcaption>
+        </figure>
+
+        <p>NPS are available and consumed in a wide variety of forms, including powders, pills,
+            liquids, or drug-infused carrier materials such as paper. <a
+                href="https://datenportal.bundesdrogenbeauftragter.de/neue-psychoaktive-stoffe-nps"> Surveys from the
+                Epidemiological Survey of Substance Abuse (ESA)</a> show that only 0.8–1% of the adult population
+            reported using NPS in the past 12 months. But their unpredictable composition and constantly evolving nature
+            make them a disproportionate challenge for healthcare providers, poison control centers, and policymakers.
+        </p>
+
+        <div class="infobox">
+            <div class="infobox-text">
+                “New psychoactive substances are a blind flight: It is often unclear which substance is present, in what
+                dosage, and what effects it may have. This makes them particularly dangerous and increases the risk of
+                severe, sometimes life-threatening poisonings.”
+            </div>
+            <div class="infobox-attribution">
+                <div class="name"><a
+                        href="https://datenportal.bundesdrogenbeauftragter.de/neue-psychoaktive-stoffe-nps">Hendrik
+                        Streeck</a></div>
+                <div class="title">Commissioner of the German Federal <br> Government for Addiction and Drug Issues
+                </div>
+            </div>
+        </div>
+
+
+        <h2>A New Drug Route Into German Prisons</h2>
+
+        <p>One place where this development is particularly visible is the German prison system. Over the past few
+            years, several federal states have reported a sharp increase in seizures of NPS. Berlin illustrates the
+            trend. Between 2020 and 2022, prison authorities seized fewer than 100 grams of NPS
+            each year. Just three years later, in 2025, that number had climbed to 2,475 grams. This is more than 25
+            times as
+            much.</p>
+
+        <figure class="exhibit">
+            <div class="exhibit-tag">Berlin</div>
+            <div class="exhibit-body">
+                <img src="charts/01_prison_berlin.svg" alt="Chart: Seizures of mixed NPS in Berlin prisons">
+            </div>
+        </figure>
+
+        <p>In response to an inquiry, the Berlin Senate Department of Justice and Consumer Protection noted that the
+            sharp increase in seizures is also attributable to the expanded use of what are now four ion scanners.
+            Nevertheless, this trend makes it clear that NPS now play a significant role in drug smuggling within
+            prisons.</p>
+
+        <p>Although NPS include hundreds of different substances, the situation inside German prisons is far less
+            diverse. According to prison authorities and experts, the vast majority of NPS seizures in prisons
+            involve synthetic cannabinoids.</p>
+
+        <h2>What the Raw Data Hides</h2>
+
+        <p>But there is a catch. The category “synthetic cannabinoids“ covers a wide range of products, from herbal
+            mixtures and pure substances to liquids and drug-infused paper. Berlin does not report these forms
+            separately. Instead, they are combined into a single statistic based on gross weight, which also includes
+            the weight of the carrier material. In response to an inquiry, the Senate Department of Justice and Consumer
+            Protection stated that a more detailed analysis of the seized substances may only be conducted through
+            forensic investigations by the State Criminal Police Office. The data from the Senate Department therefore
+            cannot reveal which form is actually responsible for the dramatic increase. A more detailed dataset is
+            needed to understand this. The prison data from Hamburg provide exactly that.</p>
+
+        <h2>From Herbal Mixtures to Drug-Infused Paper</h2>
+
+        <p>The detailed Hamburg data paints a much clearer picture. The left-hand chart shows that the number of
+            seizures of herbal NPS mixtures has declined in recent years. The right-hand chart highlights the high
+            number of consumption units recorded over the past two years.</p>
+
+        <div class="exhibit-row-outer">
+            <div class="exhibit-row">
+                <figure class="exhibit">
+                    <div class="exhibit-tag">Hamburg</div>
+                    <div class="exhibit-body">
+                        <img src="charts/02_prison_hamburg.svg" alt="Chart: Mixed NPS trending down in Hamburg prisons">
+                    </div>
+                </figure>
+                <figure class="exhibit">
+                    <div class="exhibit-tag">Hamburg</div>
+                    <div class="exhibit-body">
+                        <img src="charts/02_prison_hamburg_2.svg"
+                            alt="Chart: Drug-infused paper surging in Hamburg prisons">
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <p>It is important to note that these data have
+            only been collected systematically since 2024. It is therefore likely that NPS-infused paper were already
+            being smuggled into prisons before, but were not captured separately in the statistics. Nevertheless, the
+            trend is clear: The rise in synthetic cannabinoids is not driven by traditional herbal mixtures. Instead,
+            NPS-infused paper has rapidly emerged as the dominant form through which these substances enter the prison
+            system.</p>
+
+        <h2>The Scale of the New Smuggling Method</h2>
+
+        <p>And Baden-Württemberg confirms this development. While the data from Hamburg show the shift away from
+            traditional herbal mixtures, the figures from Baden-Württemberg illustrate the scale that the smuggling of
+            NPS-treated materials has reached.</p>
+
+        <p>According to the Ministry of Justice, the first seizures of new psychoactive substances date back to 2015. Of
+            all the federal states contacted for this investigation, Baden-Württemberg was the first to identify this
+            emerging trend. The ministry attributes this, in part, to its so-called structural observers, who are
+            stationed in every prison. Their role is to monitor subcultural developments within prisons and detect new
+            smuggling methods and the illicit introduction of contraband at an early stage.</p>
+
+
+        <p>Since 2018, Baden-Württemberg has recorded these findings by measuring the surface area (cm²) of NPS-treated
+            materials. The numbers rose sharply over the following years, reaching a peak in 2023. That year,
+            authorities seized 187,500 cm² of NPS-treated material.</p>
+
+        <figure class="exhibit">
+            <div class="exhibit-tag">Baden-Württemberg</div>
+            <div class="exhibit-body">
+                <img src="charts/03_prison_baden_wuerttemberg.svg"
+                    alt="Chart: Seizures of drug-infused paper in Baden-Württemberg prisons">
+            </div>
+        </figure>
+
+        <p> The scale is difficult to grasp from
+            the numbers alone: the seized material covered a total surface area of nearly 19 m². This is roughly the
+            size of a
+            small bedroom or around 300 sheets of A4 paper.</p>
+
+        <p>It is important to note that these statistics measure the surface area of the material on which NPS were
+            detected, rather than the quantity of the substance itself. Nevertheless, the data illustrate how rapidly
+            this smuggling method has gained importance within the prison system.</p>
+
+        <h2>How Prisons Are Fighting Back</h2>
+
+        <p>After reaching its peak in 2023, the recorded figures declined significantly. In response to our request, the
+            Ministry of Justice of Baden-Württemberg attributed this decline to a combination of countermeasures.
+            Beginning in 2021, the state introduced ion scanners capable of detecting synthetic cannabinoids and other
+            drugs on letters and other carrier materials. Following a successful pilot programme, additional devices
+            were purchased and deployed across the prison system. Controls of incoming prisoner mail were also
+            tightened, including the option of providing prisoners with photocopies instead of original letters where
+            incoming mail is misused to smuggle NPS. At the same time, prevention, counselling, substitution, and
+            treatment programmes aim to reduce the demand for drugs within prisons.</p>
+
+        <p>Bremen and Berlin have also reported the use of ion scanners. At the same time, it should be noted that since
+            Baden-Württemberg began systematically tracking these cases early on, the state also had more time to
+            develop and implement targeted countermeasures. Other federal states, by contrast, have only recently begun
+            collecting such data. However, without a reliable overview of the actual extent and development of the
+            problem, it is significantly more difficult to develop targeted and appropriate measures.</p>
+
+        <h2>The Endless Race Against New Drug Routes</h2>
+
+        <p>But even where authorities are already responding, the underlying challenge remains: NPS smuggling is
+            constantly evolving. The data from Germany’s federal states show how quickly the smuggling of new
+            psychoactive substances has
+            changed. It no longer requires packages thrown over prison walls or handovers during visits, the drugs
+            arrive through the mail. And as detection methods become more effective, smugglers are likely to adapt
+            again, searching for new substances, new carrier materials, or new ways to evade controls.</p>
+
+        <div class="infobox methodology">
+            <div class="infobox-heading">Methodology</div>
+
+            <p class="infobox-text">The methodology is briefly summarized below. A more detailed explanation can be
+                found here: XXX.</p>
+
+            <h4 class="infobox-subheading">📊 Data Gathering and Analysis</h4>
+            <p class="infobox-text">Comprehensive data on drug seizures in German prisons is not publicly available. I
+                therefore obtained the data through press inquiries.</p>
+            <p class="infobox-text">Germany has nearly 200 correctional facilities, making it impractical to contact
+                every prison as part of this project. I therefore began by submitting inquiries to a sample of 12
+                prisons. Some facilities, however, had not collected the requested data, lacked the capacity to respond,
+                or referred me to the respective state authorities.</p>
+            <p class="infobox-text">As a second approach, I contacted state justice ministries and senate departments.
+                Since some of these institutions also referred me back to individual prisons, I ultimately pursued both
+                approaches in parallel and worked with all available data.</p>
+            <p class="infobox-text">As expected, <strong>all correctional facilities, state justice ministries and
+                    senate departments collect their data differently</strong>. Some prisons, for example, only record
+                how often specific substances were found, while others document the exact quantities seized. These
+                different approaches make a comparative data analysis challenging. The categories used to document
+                substances also vary significantly. Some for example, use categories such as NPS paper consumption
+                units, while others record NPS-treated materials by surface area in cm². <strong>I manually reviewed all
+                    responses and datasets received and transferred the relevant information into this Excel
+                    table, which served as the underlying dataset for this analysis. All subsequent analyses were
+                    conducted in Python.</strong></p>
+
+            <h4 class="infobox-subheading">⚠️ Limitations and Future Steps</h4>
+            <p class="infobox-text">This analysis provides an initial overview of the role of NPS in the German prison
+                system. However, it is important to note that the findings represent an approximation due to existing
+                data gaps. The analysis highlights initial trends and patterns but does not yet provide a complete
+                nationwide assessment.</p>
+            <ol class="infobox-list">
+                <li>Not all state justice ministries, senate departments, and correctional facilities have been
+                    contacted. A next step would therefore be to expand the data collection to all relevant institutions
+                    in order to create a more comprehensive picture of developments across Germany.</li>
+                <li>Many federal states are only at the beginning of systematically recording NPS-related incidents.
+                    Some
+                    categories have only been documented for a few years or were introduced very recently. This can
+                    distort observed trends: An increase in recorded cases may reflect either an actual change in
+                    smuggling patterns or improved data collection. Ultimately, a data analysis can only be as reliable
+                    as
+                    the underlying data collection.</li>
+            </ol>
+        </div>
+
+        <div class="infobox methodology">
+
+            <p class="infobox-text">The initial inspiration for the website's design came from <a
+                    href="https://pudding.cool/2026/05/kpop-generations/"> this article</a> by The
+                Pudding, although the
+                final design has
+                since evolved considerably beyond it.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
