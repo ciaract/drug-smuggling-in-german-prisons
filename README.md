@@ -38,7 +38,7 @@ The repository is structured as follows:
 `analysis.ipynb` contains the Python code that analyzes the input file <br> 
 `docs/charts` contains the published output <br> 
 `docs/charts` contains all the graphics created based on my analysis <br> 
-`input` contains the raw data that I manually aggregated based on my press inquiries (s. [Data Gathering](#data-gathering)) <br> 
+`input` contains the raw data that I manually aggregated based on my press inquiries (s. [Data Gathering](#--data-gathering)) <br> 
 `output` contains the processed datasets, they form the basis for my charts 
 
 
@@ -49,7 +49,7 @@ Germany has nearly 200 correctional facilities. Requesting data from every singl
 
 As a second approach, I submitted inquiries to the justice ministries and senate departments of some German federal states. However, not all state justice ministries had access to the required data and some referred me back to individual prisons.
 
-In the end, I decided to pursue both approaches in parallel and work with all available data I was able to obtain. This is also an important limitation of the analysis, as the current dataset is not yet representative of the entire German prison system. More on this can be found in the limitations section (s. [Limitations and Future Steps](#limitations-and-future-steps)). 
+In the end, I decided to pursue both approaches in parallel and work with all available data I was able to obtain. This is also an important limitation of the analysis, as the current dataset is not yet representative of the entire German prison system. More on this can be found in the limitations section (s. [Limitations and Future Steps](#--limitations-and-future-steps)). 
 
 As expected, __all correctional facilities, state justice ministries and senate departments collect their data differently__. Some prisons, for example, only record how often specific substances were found, while others document the exact quantities seized. These different approaches make a comparative data analysis challenging. The categories used to document substances also vary significantly. Some for example, use categories such as NPS paper consumption units, while others record NPS-treated materials by surface area in cm². __I manually reviewed all responses and datasets received and transferred the relevant information into this Excel table, which served as the underlying dataset for this analysis__ (s. `input/penal_system_data.xlsx`).
 
@@ -98,7 +98,7 @@ All subsequent analyses were conducted in Python. The following sections describ
 
 #### 1. Recorded Drug Seizures 
 #### 1.1. Harmonizing data 
-As already described in the Data Gathering section (s. [Data Gathering](#data-gathering)), all correctional facilities, state justice ministries, and senate departments document their data differently. My initial approach was to harmonize the different recording methods by converting all available data into consumption units. To ensure that such a conversion would be methodologically sound, I consulted several experts. However, all experts advised against this approach because even a single piece of paper can contain different concentrations of a substance and therefore represent different numbers of consumption units. I therefore decided not to create a unified dataset based on conversions. Instead, I focused on analysing groups of data where the recording method was consistent within the dataset. One example is the state of Baden-Württemberg, which provided aggregated data covering all correctional facilities within the state.
+As already described in the Data Gathering section (s. [Data Gathering](#--data-gathering)), all correctional facilities, state justice ministries, and senate departments document their data differently. My initial approach was to harmonize the different recording methods by converting all available data into consumption units. To ensure that such a conversion would be methodologically sound, I consulted several experts. However, all experts advised against this approach because even a single piece of paper can contain different concentrations of a substance and therefore represent different numbers of consumption units. I therefore decided not to create a unified dataset based on conversions. Instead, I focused on analysing groups of data where the recording method was consistent within the dataset. One example is the state of Baden-Württemberg, which provided aggregated data covering all correctional facilities within the state.
 
 However, the categories “Spice_g” and “NPS_Mischung_g” were combined, as follow-up inquiries confirmed that they represent the same physical product category (herbal mixtures) and transition seamlessly into one another.
 
