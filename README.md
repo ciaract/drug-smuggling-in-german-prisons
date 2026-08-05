@@ -116,7 +116,7 @@ The requested data on "medical and security-related incidents associated with dr
 ## ⚠️ Limitations and Future Steps
 This analysis provides an initial overview of the role of NPS in the German prison system. However, it is important to note that the findings represent an approximation due to existing data gaps. The analysis highlights initial trends and patterns but does not yet provide a complete nationwide assessment.
 
-First, not all state justice ministries, senate departments, and correctional facilities have been contacted. A next step would therefore be to expand the data collection to all relevant institutions in order to create a more comprehensive picture of developments across Germany.
+First, not all state justice ministries, senate departments, and correctional facilities have been contacted. A next step would therefore be to expand the data collection in order to create a more comprehensive picture of developments across Germany.
 
 Second, many federal states are only at the beginning of systematically recording NPS-related incidents. Some categories have only been documented for a few years or were introduced very recently. This can distort observed trends: An increase in recorded cases may reflect either an actual change in smuggling patterns or improved data collection. Ultimately, a data analysis can only be as reliable as the underlying data collection.
 
